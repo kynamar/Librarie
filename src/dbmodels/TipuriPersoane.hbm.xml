@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 21-Sep-2021 18:46:43 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="dbmodels.TipuriPersoane" table="TIPURI_PERSOANE" schema="APP" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="idPersoane" type="int">
+            <column name="ID_PERSOANE" not-null="true" />
+        </property>
+        <property name="idTipuri" type="int">
+            <column name="ID_TIPURI" not-null="true" />
+        </property>
+        <property name="dateStart" type="date">
+            <column name="DATE_START" length="10" not-null="true" />
+        </property>
+        <property name="dateEnd" type="date">
+            <column name="DATE_END" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

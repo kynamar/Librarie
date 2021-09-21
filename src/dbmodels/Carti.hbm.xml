@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 21-Sep-2021 18:46:43 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="dbmodels.Carti" table="CARTI" schema="APP" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="idEditura" type="int">
+            <column name="ID_EDITURA" not-null="true" />
+        </property>
+        <property name="isbn" type="string">
+            <column name="ISBN" length="50" not-null="true" unique="true" />
+        </property>
+        <property name="nume" type="string">
+            <column name="NUME" length="50" not-null="true" />
+        </property>
+        <property name="descriere" type="string">
+            <column name="DESCRIERE" length="200" />
+        </property>
+        <property name="pret" type="java.lang.Double">
+            <column name="PRET" precision="52" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

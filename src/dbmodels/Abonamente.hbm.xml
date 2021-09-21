@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 21-Sep-2021 18:46:43 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="dbmodels.Abonamente" table="ABONAMENTE" schema="APP" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="nume" type="string">
+            <column name="NUME" length="50" not-null="true" />
+        </property>
+        <property name="durata" type="int">
+            <column name="DURATA" not-null="true" />
+        </property>
+        <property name="tip" type="int">
+            <column name="TIP" not-null="true" />
+        </property>
+        <property name="pret" type="double">
+            <column name="PRET" precision="52" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

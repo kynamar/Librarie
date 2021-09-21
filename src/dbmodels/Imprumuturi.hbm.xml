@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 21-Sep-2021 18:46:43 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="dbmodels.Imprumuturi" table="IMPRUMUTURI" schema="APP" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="idPersoane" type="int">
+            <column name="ID_PERSOANE" not-null="true" />
+        </property>
+        <property name="idCarti" type="int">
+            <column name="ID_CARTI" not-null="true" />
+        </property>
+        <property name="dataImprumut" type="date">
+            <column name="DATA_IMPRUMUT" length="10" not-null="true" />
+        </property>
+        <property name="dataReturnare" type="date">
+            <column name="DATA_RETURNARE" length="10" not-null="true" />
+        </property>
+        <property name="descriere" type="string">
+            <column name="DESCRIERE" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>
